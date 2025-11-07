@@ -214,3 +214,83 @@ header a.active { color: #457b94; font-weight: bold; }
 }
 
 .gallery-item:hover .gallery-info { display: block; }
+
+/* ──────────────── ADAPTACIÓN PARA TELÉFONOS Y TABLETS ──────────────── */
+@media (max-width: 1024px) {
+  .container,
+  .gallery-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .brand {
+    position: static;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .disc {
+    width: 200px;
+    height: 200px;
+  }
+
+  .playlist h3 { text-align: center; }
+  .playlist-item img { width: 35px; height: 35px; }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .container,
+  .gallery-container {
+    width: 95%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .disc {
+    width: 160px;
+    height: 160px;
+  }
+
+  .controls {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .controls button {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .song-info h2 { font-size: 20px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+}
